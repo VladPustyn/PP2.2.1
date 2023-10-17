@@ -22,8 +22,7 @@ public class User {
     @Column(name = "email")
     private String email;
 
-    @OneToOne(mappedBy = "user")
-
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Car userСar;
 
     public User() {
